@@ -1,9 +1,8 @@
-
 def details(info)
 { nickname: info.match(/^([a-zA-Z0-9_.-]?{20}+)@/)[1],
   domain: info.match(/@([a-zA-Z0-9]+)\./)[1],
   com: info.match(/\.([a-zA-Z]+)$/)[1],
-  mood: info.match(/([a-zA-Z"'])/)[1].gsub("""", " ")
+  mood: info.match(/([a-zA-Z"'])/)[1].gsub("\"", " ")
 }
 end
 
@@ -11,8 +10,12 @@ def get_nickname(name)
     return details(name)[:nickname]
 end
 
-def get_nickname(name)
-    return details(name)[:mood]
+def get_mood(mood)
+    return details(mood)[:mood]
+end
+
+def get_status(reason)
+  return "Your status is #{get_mood} \n #{reason}"
 end
 
 

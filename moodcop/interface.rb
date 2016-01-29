@@ -25,5 +25,8 @@ puts 'Positive: "Engaged", "Inspired", "Motivated", "Calm", "Excited", "Happy", 
 puts 'Negative: "Angry", "Afraid", "Dissappointed", "Confused", "Insecure", "Stressed", "Sad"'
 give_mood = gets.chomp.to_s
 
-puts "\nWrite one sentence why #{give_mood}?"
+puts "\nWrite one sentence why are you #{give_mood}?"
 reason_mood = gets.chomp.to_s
+
+puts get_status(reason_mood)
+
